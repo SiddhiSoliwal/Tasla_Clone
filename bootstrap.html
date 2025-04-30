@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<style>
+  .cars,
+  .energy .charging {
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    z-index: 999;
+
+  }
+
+  .back {
+    background-image: url(Homepage-Model-Y-Desktop-US-v2.avif);
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .two {
+    background-image: url(blue\ and\ red\ big\ cars.avif);
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+
+  .three {
+    background-image: url(grey\ car.avif);
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+
+  .four {
+    background-image: url(white\ car\ big.avif);
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .fifth {
+    background-image: url(bwown\ car.avif);
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .seven {
+    background-image: url(house.avif);
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+
+  .eight {
+    background-image: url(Homepage-SolarRoof-Desktop-US.avif);
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+
+  }
+
+  .nine {
+    background-image: url(Homepage-Powerwall-Desktop-US.avif);
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+  }
+
+  .ten {
+    background-image: url(wire\ brown.avif);
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+
+  .eleven {
+    background-image: url(red\ big\ car.avif);
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #id {
+    color: black;
+  }
+</style>
+
+<body>
+  <section class="back">
+    <section style="width: 100%;" onmouseleave="hide()">
+      <nav id="navbar" class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+          <a class="navbar-brand px-5 fs-4 " href="#"><img src="tesla-logo-png-20.png" height="17vh" width="90%"
+              alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+          </button>
+          <div class="collapse navbar-collapse fs-4 fw-bold " id="navbarNavDropdown">
+            <ul class="navbar-nav" style="margin-left: 22%; gap: 6%;">
+              <li class="nav-item">
+                <a class="nav-link" id="vehical" onmouseover="opac()" aria-current="page" href="">Vehicals</a>
+              </li>
+              <li class="nav-item text-white">
+                <a class="nav-link" id="energy"   href="">Energy</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="Charging"  href="">Charging</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="Discover"  href="">Discover</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="Shop"  href="">Shop</a>
+              </li>
+              <div class="float-end  " >
+                <li class="nav-item text-light d-flex px-5">
+                  <a class="nav-link  px-2" href="#"><img class="border border-2 rounded-circle border-black"
+                      src="question-mark-regular-24.png" height="25px" width="25px" alt=""></a>
+                  <a class="nav-link px-2" href="#"><img src="globe-regular-24.png" height="25px" width="25px"
+                      alt=""></a>
+                  <a class="nav-link px-2 " href="#"><img src="contact-solid-24.png" height="25px" width="25px"
+                      alt=""></a>
+                </li>
+              </div>
+            </ul>
+          </div>
+      </nav>
+
+
+      <!-- <div class="n p-lg-1  p-5 d-flex justify-content-around cars bg-white "> 
+        <div class="bg-transparent w-50">
+          <div class="img d-flex jusfty-content-around d-flex justify-content-between p-2 flex-fill ">
+            <img src="black car.avif" class="rounded float-center c" height="200px" width="350px" alt=" ...">
+            <img src="red car.avif" class="rounded float-center" height="200px" width="350px" alt=" ...">
+            <img src="white car.avif" class="rounded float-center" height="200px" width="350px" alt=" ...">
+          </div>
+          <div class="d-flex flex-row fw-semibold d-flex justify-content-center d-flex justify-content-between">
+            <div class="p-2"></div>
+            <div class="p-2">Model s</div>
+            <div class="p-2">Model 3</div>
+            <div class="p-2">Model x</div>
+          </div>
+
+
+          <div class="d-flex flex-row mb-5 fw-semibold d-flex justify-content-center d-flex justify-content-between">
+            <div class="p-1"></div>
+            <div class="p-1"><u>Learn</u> <u>Order</u> </div>
+            <div class="p-1"><u>Learn</u> <u>Order</u> </div>
+            <div class="p-1"><u>Learn</u> <u>Order</u> </div>
+          </div>
+
+
+          <div class="img d-flex justify-content-between ">
+            <img src="blue car.avif" class="rounded float-center c" height="200px" width="350px" alt=" ...">
+            <img src="car white black.avif" class="rounded float-center" height="200px" width="350px" alt=" ...">
+            <img src="red blue.avif" class="rounded float-center" height="200px" width="350px" alt="...">
+          </div>
+          <div class="text d-flex jusfty-content-around">
+            <div class="text d-flex jusfty-content-around">
+            </div>
+            <div class="d-flex flex-row fw-semibold  d-flex justify-content-between p-1 flex-fill">
+              <div class="p-1"></div>
+              <div class="p-1">Model y</div>
+              <div class="p-1">Cybertruck</div>
+              <div class="p-1">Help me choose</div>
+            </div>
+          </div>
+          <div class="d-flex flex-row mb-1 fw-semibold d-flex justify-content-center d-flex justify-content-between">
+            <div class="p-1"></div>
+            <div class="p-1"><u>Learn</u> <u>Order</u> </div>
+            <div class="p-1"><u>Learn</u> <u>Order</u> </div>
+            <div class="p-1"><u>Learn</u> <u>Order</u> </div>
+          </div>
+        </div>
+
+ <br>
+        <div style="margin-top: 50px;" class="fw-semibold p-1">
+          <div class="p-2">Inventory</div>
+          <div class="p-2">used Cars</div>
+          <div class="p-2">Demo Drive</div>
+          <div class="p-2">Inventory</div>
+          <div class="p-2">Trading</div>
+          <div class="p-2">Campare</div>
+          <div class="p-2">Help Me Charge</div>
+          <div class="p-2">Fleet</div>
+          <div class="p-2">Semi</div>
+          <div class="p-2">Roadstera</div>
+          <div class="p-2">Federal Tex Credit</div>
+        </div>
+      </div>
+
+
+      <center>
+        <div class=" model text-white z-index">
+          <h1 class="display-1  fw-semibold  z-index">Model Y</h1>
+          <h1> <u>$0 Due at Signing </u></h1>
+          <h2>From $31,490</h2>
+        </div>
+      </center>
+
+      <center>
+        <div class="p-5 mt-n1 fs-5" style="margin-top: 22%;">
+          <button type="button" class="btn btn-primary btn-lg ">Order Now </button>
+          <button type="button" class="btn btn-secondary btn-lg bg-white text-black border border-white">Demo
+            Drive</button>
+        </div>
+      </center> -->
+
+
+
+      <!-- Energy  -->
+
+ <!-- <div id="energy" class="n p-lg-4 d-flex justify-content-between ene bg-white ">
+        <div class="bg-transparent w-50  ms-5 ">
+          <div class="img d-flex  d-flex justify-content-between p-4 flex-fill ">
+            <img src="Mega-Menu-Energy-Solar-Panels.avif" class="rounded float-center c  ms-5" height="200px"
+              width="350px" alt=" ...">
+            <img src="Mega-Menu-Energy-Solar-Roof.avif" class="rounded float-center" height="200px" width="350px" alt="
+              ...">
+            <img src="Mega-Menu-Energy-Powerwall-US.avif" class="rounded float-center" height="200px" width="350px" alt="
+              ...">
+          </div>
+          <div class="d-flex flex-row d-flex justify-content-center d-flex justify-content-between">
+            <div class="p-2 ms-5"></div>
+            <div class="p-2 fw-semibold">Solar Panel</div>
+            <div class="p-2 ms-5 fw-semibold">Solar Roof</div>
+            <div class="p-2 ms-5 fw-semibold">Powerwall</div>
+          </div>
+
+          <div class="d-flex flex-row mb-5 fw-semibold d-flex justify-content-center d-flex justify-content-between">
+            <div class="p-1 ms-5"></div>
+            <div class="p-1"><u>Learn</u> <u>Order</u> </div>
+            <div class="p-1 ms-5"><u>Learn</u> <u>Order</u> </div>
+            <div class="p-1 ms-5"><u>Learn</u> <u>Order</u> </div>
+          </div> -->
+
+<!-- 
+          <div class="img ms-5">
+            <img src="Mega-Menu-Energy-Megapack.avif" class="rounded float-center c  ms-5" height="200px" width="300px"
+              alt=" ...">
+            <div class="p-2 ms-5 "><b>Megapack</b></div>
+            <div class="p-2 ms-5 fw-semibold"><u>Learn</u> <u>Order</u> </div>
+          </div>
+
+
+        </div>
+        <div class=" Bold text fw-semibold fw-semibold p-5">
+          <div class="p-3">Schedule Consulation</div>
+          <div class="p-3">Why solar</div>
+          <div class="p-3">Incentives</div>
+          <div class="p-3">Support</div>
+          <div class="p-3">Partner with Tesla</div>
+          <div class="p-3">Commercial</div>
+          <div class="p-3">utilites</div>
+        </div>
+      </div>
+      </center>
+    </section>
+    </div>
+  </section>
+  <center> --> 
+    <br> -->
+    <!-- Charging -->
+
+     <!-- <div id="Charging" class="n p-lg-4 d-flex justify-content-between charging bg-white ">
+      <div class="bg-transparent w-50  ms-5 ">
+        <div class="img d-flex justify-content-between p-4 flex-fill ">
+          <img src="Mega-Menu-Charging-Charging.avif" class="rounded float-center c  ms-5" height="200px" width="350px"
+            alt=" ...">
+          <img src="Mega-Menu-Charging-Home-Charging.avif" class="rounded float-center" height="200px" width="350px"
+            alt="...">
+          <img src="Mega-Menu-Charging-Supercharging-NA.avif" class="rounded float-center" height="200px" width="350px"
+            alt=" ...">
+        </div>
+        <div class="d-flex flex-row d-flex justify-content-center d-flex justify-content-between">
+          <div class="p-2 ms-5"></div>
+          <div class="p-2 fw-semibold">Charging</div>
+          <div class="p-2 ms-5 fw-semibold">home Charging</div>
+          <div class="p-2 ms-5 fw-semibold">super charging</div>
+        </div>
+
+        <div class="d-flex flex-row mb-5 fw-semibold d-flex justify-content-center d-flex justify-content-between">
+          <div class="p-1 ms-5"></div>
+          <div class="p-1"><u>Learn</u> </div>
+          <div class="p-1 ms-5"><u>Learn</u> <u>shop</u> </div>
+          <div class="p-1 ms-5"><u>Learn</u> <u>shop</u> </div>
+        </div>
+      </div>
+      <div class=" Bold text fw-semibold fw-semibold p-5">
+        <div class="p-3">Schedule Consulation</div>
+        <div class="p-3">Why solar</div>
+        <div class="p-3">Incentives</div>
+        <div class="p-3">Support</div>
+        <div class="p-3">Partner with Tesla</div>
+        <div class="p-3">Commercial</div>
+        <div class="p-3">utilites</div>
+      </div>
+    </div>
+  </center>
+  </section>
+  </div>
+  </section>
+  <center> -->
+
+
+
+    <!-- discover -->
+
+ 
+  <!-- 2nd page -->
+    <!-- <section>
+      <div class="two">
+        <center>
+          <div class=" model text-white z-index p-5 mt-n1 fs-2">
+            <h1 class="display-1  fw-semibold  z-index">Model 3</h1>
+            <h1> <u>0% APR with purchase of FSD (Supervised) </u></h1>
+            <h2>lease starting at $299/mo2 </h2>
+          </div>
+        </center>
+        <center>
+          <div class="p-5 mt-n1 fs-5" style="margin-top: 20%;">
+            <button type="button" class="btn btn-primary btn-lg ">Order Now</button>
+            <button type="button" class="btn btn-secondary btn-lg bg-white text-black border border-white">Experience
+              Model 3</button>
+          </div>
+        </center>
+
+      </div>
+    </section>
+    <br> -->
+
+    <!-- 3rd page -->
+    <section>
+      <div class="three">
+        <center>
+          <div class=" model text-white z-index p-5 mt-n1 fs-2">
+            <h1 class="display-1  fw-semibold  z-index">Model x</h1>
+            <h1>Model $65,990</h1>
+            <h1> <u>After Federal Tax Credit $7,500 </u></h1>
+            <h2><u>and Est,Gas Saving $6,500</u> </h2>
+          </div>
+        </center>
+        <center>
+          <div class="p-5 mt-n1 fs-5" style="margin-top: 17%;">
+            <button type="button" class="btn btn-primary btn-lg ">Order Now</button>
+            <button type="button" class="btn btn-secondary btn-lg bg-white text-black border border-white">Demo
+              Drive</button>
+          </div>
+        </center>
+      </div>
+    </section>
+
+    <br>
+    <!-- 4th page -->
+    <section>
+      <div class="four">
+        <center>
+          <div class=" model text-white z-index p-5 mt-n1 fs-2">
+            <h1 class="display-1  fw-semibold  z-index">Model s</h1>
+            <h1>From $68,490</h1>
+            <h1> <u>After Est,Gas Savings $7,500 </u></h1>
+          </div>
+        </center>
+        <center>
+          <div class="p-5 mt-n1 fs-5" style="margin-top: 20%;">
+            <button type="button" class="btn btn-primary btn-lg ">Order Now</button>
+            <button type="button" class="btn btn-secondary btn-lg bg-white text-black border border-white">Demo
+              Drive</button>
+          </div>
+        </center>
+
+      </div>
+    </section>
+
+    <br>
+    <!-- 5th page -->
+    <section>
+      <div class="fifth">
+        <center>
+          <div class=" model text-white z-index p-5 mt-n1 fs-5">
+            <h1 class="display-1  fw-semibold  z-index"></h1>
+            <h1 class="display-1  fw-semibold  z-index">FOUNDATION</h1>
+            <h1> <u> </u></h1>
+          </div>
+        </center>
+        <center>
+          <div class="p-5 mt-n1 fs-5" style="margin-top: 25%;">
+            <button type="button" class="btn btn-primary btn-lg bg-black border border-black ">Order Now</button>
+            <button type="button" class="btn btn-secondary btn-lg bg-black text-white border  border border-black">Demo
+              Drive</button>
+          </div>
+        </center>
+
+      </div>
+    </section>
+    <br>
+
+
+
+    <!-- 7th page -->
+    <section>
+      <div class="seven">
+        <center>
+          <div class=" model text-white z-index p-5 mt-n1 fs-2 ">
+            <h1 class="display-1  fw-semibold  z-index"></h1>
+            <h1 class="display-1  fw-semibold  z-index">Solar Panels</h1>
+            <h1> <u>Schedule a Virtual Consulation </u></h1>
+          </div>
+        </center>
+        <center>
+          <div class="p-5 mt-n1 fs-5" style="margin-top: 22%;">
+            <button type="button" class="btn btn-primary btn-lg bg-blue ">Order Now</button>
+            <button type="button" class="btn btn-secondary btn-lg bg-white text-black  border border-white ">Learn
+              More</button>
+          </div>
+        </center>
+      </div>
+    </section>
+
+    <br>
+    <!-- 8th page -->
+    <section>
+      <div class="eight">
+        <center>
+          <div class=" model text-white z-index p-5 mt-n1 fs-2">
+            <h1 class="display-1  fw-semibold  z-index"></h1>
+            <h1 class="display-1  fw-semibold  z-index">Solar Roof</h1>
+            <h2> <u> Product Clean Energy From Your Roof7</u></h2>
+          </div>
+        </center>
+        <center>
+          <div class="p-5 mt-n1 fs-5" style="margin-top: 22%;">
+            <button type="button" class="btn btn-primary btn-lg bg-blue ">Order Now</button>
+            <button type="button" class="btn btn-secondary btn-lg bg-white  text-black border border-white">Learn
+              More</button>
+          </div>
+        </center>
+      </div>
+    </section>
+
+    <br>
+
+    <!-- 9th page -->
+    <section>
+      <div class="nine">
+        <center>
+          <div class=" model text-white z-index p-5 mt-n1 fs-3">
+            <h1 class="display-1 fw-semibold  z-index"></h1>
+            <h1 class="display-1  fw-semibold  z-index">Powerwall</h1>
+          </div>
+        </center>
+        <center>
+          <div class="p-5 mt-n1 fs-5" style="margin-top: 25%;">
+            <button type="button" class="btn btn-primary btn-lg bg-blue ">Order Now</button>
+            <button type="button" class="btn btn-secondary btn-lg bg-white  text-black border border-white">Learn
+              More</button>
+          </div>
+        </center>
+      </div>
+    </section>
+
+    <br><br>
+
+    <!-- 10th page -->
+    <section>
+      <div class="ten">
+        <center>
+          <div class=" model text-white z-index p-3 mt-n1 fs-3">
+            <h1 class="display-1 fw-semibold  z-index"></h1>
+            <h1 class="display-1  fw-semibold  z-index">Accessories</h1>
+          </div>
+
+          <div class="p-5 mt-n1 fs-5" style="margin-top: 30%;">
+            <div class="d-grid  col-2">
+              <button class="btn btn-primary" type="button">Shop Now</button>
+
+            </div>
+          </div>
+        </center>
+      </div>
+    </section>
+
+    <br>
+    <!-- 11th page -->
+    <section>
+      <div class="eleven">
+        <div class=" model text-white z-index p-5 mt-n1 float-start fs-4"> <br><br><br><br> <br><br><br><br><br>
+          <br><br><br><br>
+          <h1 class="display-1 fw-semibold  z-index">We Are Tesla</h1> 
+          <button type="button" class="btn btn-primary btn-lg text-black bg-white grid text-center  float-start"
+            style="margin-left: 35%; border-color: aliceblue; ">Join Tesla</button> 
+            
+        </div>
+
+      </div>
+    </section>
+    <br><br>
+
+    <br>
+    <center>
+      <div class=" p-5 mt-n1 fs-4  fw-semibold  ms-5">
+        <p>Monthly lease payment excludes taxes and fees ,is based on $44,990 model y long range reare-weel <br> drive
+          purchase price and is subject and change it anybtime requrires $2,999 down with 36 month and <br>10000 miles,
+          subject to cerdit approval and available and select u.s.statte <u>term apply</u></p>
+        <br>
+
+        <p>Monthly lease payment includes taxes and fees is based on $42,490 model 3 long range reasr wheel rear
+          <br>-drive purchase price ans is subject and at any time. require $2999 down eith 36month and 10,000
+          miles <br> subject to credit approval to available in select us state <u>term apply.</u>
+        </p>
+        <br>
+        <p>
+          price before estimated saving is $816030 including destination in order fees but excluding taxes and other
+          feesa <br> .subject to change .vehicals has show appragetes that will incerse the price.estimates saving
+          includes $6500 in a <br> <u>gas saving </u>.estimates over five year ,the $7500 federal tax credit and state
+          incentives available to elegible buyers <br>and subject to MSRP caps not all to vechile customers to finance
+          otptions to be elegible <u>term apply</u>
+        </p> <br><br>
+        <nav class="navbar p-5">
+          <div class="fs-5 fw-semibold " style="margin-left: 3%;">
+            <a class="navbar-brand fs-4 ms-5 " href="#">Tesla@2024</a>
+            <a class="navbar-brand fs-4 ms-3" href="#">Privacy & Legal</a>
+            <a class="navbar-brand fs-4  ms-3" href="#">Vehical Recalls</a>
+            <a class="navbar-brand fs-4  ms-3" href="#">Contact</a>
+            <a class="navbar-brand fs-4  ms-3" href="#">News</a>
+            <a class="navbar-brand fs-4  ms-3" href="#">Get Updates</a>
+            <a class="navbar-brand fs-4  ms-3" href="#">Locations</a>
+          </div>
+      </div>
+      </nav>
+    </center>
+ 
+
+    
+</body>
+
+<script>
+  let cars = document.querySelector(".cars")
+  let navbar = document.querySelector("#navbar");
+  let vehical = document.querySelector("#vehical");
+  let energy = document.querySelector("#energy");
+  let charging = document.querySelector("#charging");
+
+  function opac() {
+    cars.style.opacity = "1";
+    navbar.style.backgroundColor = "white";
+    vehical.style.color = "black"
+  }
+  function ene() {
+    energy.style.opacity = "1";
+    cars.style.opacity = "0";
+    navbar.style.backgroundColor = "white";
+
+  }
+  function char() {
+    energy.style.opacity = "1";
+    cars.style.opacity="0";
+    navbar.style.backgroundColor = "white";
+
+  }
+
+
+  function hide() {
+    cars.style.opacity = "0";
+    navbar.style.backgroundColor = "transparent";
+    vehical.style.color = "white";
+    charging.style.color = "white";
+
+
+  }
+</script>
+
+
+</html>
